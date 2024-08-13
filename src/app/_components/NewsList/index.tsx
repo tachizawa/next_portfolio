@@ -2,6 +2,8 @@ import Image from "next/image"
 
 import styles from "./index.module.css"
 import { News } from "@/app/_libs/microcms";
+import Category from "@/app/_components/Category";
+import Date from "@/app/_components/Date";
 
 
 type Props = {
@@ -27,15 +29,8 @@ export default function NewsList({ news }: Props) {
                     <dl className={styles.content}>
                         <dt className={styles.title}>{article.title}</dt>
                         <dd className={styles.meta}>
-                            <span className={styles.tag}>{article.category.name}</span>
-                            <span className={styles.date}>
-                                <Image
-                                    src="/clock.svg"
-                                    alt=""
-                                    width={16}
-                                    height={16}/>
-                                {article.publishAt}
-                            </span>
+                            <Category category={article.category}/>
+                            <Date date={article.publishAt ?? article.createdAt}/>
                         </dd>
                     </dl>
                 </li>

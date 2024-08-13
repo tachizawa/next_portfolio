@@ -60,9 +60,3 @@ ul {
 
   list-style: none;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
