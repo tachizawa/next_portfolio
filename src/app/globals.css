@@ -42,7 +42,7 @@ body {
 
 body {
   font-family: -apple-system, "Helvetica Neue", sans-serif;
-  color: var(--color-text-error);
+  color: var(--color-text-main);
   line-height: 1.8;
 }
 
@@ -57,6 +57,5 @@ a {
 
 ol,
 ul {
-
   list-style: none;
 }

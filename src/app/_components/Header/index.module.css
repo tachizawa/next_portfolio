@@ -17,8 +17,29 @@
     width: auto;
 }
 
+.items {
+    display: flex;
+    color: #fff;
+    gap: 40px;
+}
+
+.button {
+    display: none;
+}
+
 @media (max-width: 640px) {
     .header {
         padding: 24px 16px 8px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .button {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }

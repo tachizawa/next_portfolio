@@ -34,7 +34,6 @@ const data: {
 };
 
 export default function Home() {
-    const sliceData = data.contexts.slice(0,2);
     return (
         <>
             <section className={styles.top}>
@@ -54,7 +53,7 @@ export default function Home() {
             </section>
             <section>
                 <h2 className={styles.news}>News</h2>
-                <NewsList news={sliceData}/>
+                <NewsList news={data.contexts}/>
                 <div className={styles.newsLink}>
                     <ButtonLink href="/news">　もっとみる</ButtonLink>
                 </div>
