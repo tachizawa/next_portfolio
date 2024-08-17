@@ -1,5 +1,6 @@
 import type {MicroCMSImage, MicroCMSListContent, MicroCMSQueries} from "microcms-js-sdk";
 import {createClient} from "microcms-js-sdk";
+import Category from "@/app/_components/Category";
 
 export type News = {
     title: string;
@@ -44,5 +45,24 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
     return await client.getList<News>({
         endpoint: "news",
         queries,
+    });
+}
+
+export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+    return await client.getListDetail<News>({
+        endpoint: "news",
+        contentId,
+        queries
+    });
+}
+
+export const getCategoryDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+) => {
+    return await client.getListDetail<Category>({
+        endpoint: "categories",
+        contentId,
+        queries
     });
 }
